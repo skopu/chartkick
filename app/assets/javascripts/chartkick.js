@@ -132,6 +132,10 @@
         options.colors = opts.colors;
       }
 
+      if (opts.slices) {
+        options.slices = opts.slices;
+      }
+
       // merge library last
       options = merge(options, opts.library || {});
 
@@ -330,6 +334,9 @@
         var chartOptions = {};
         if (chart.options.colors) {
           chartOptions.colors = chart.options.colors;
+        }
+        if (chart.options.slices) {
+          chartOptions.slices = chart.options.slices;
         }
         var options = merge(merge(defaultOptions, chartOptions), chart.options.library || {});
         options.chart.renderTo = chart.element.id;
@@ -573,6 +580,9 @@
           };
           if (chart.options.colors) {
             chartOptions.colors = chart.options.colors;
+          }
+          if (chart.options.slices) {
+            chartOptions.slices = chart.options.slices;
           }
           var options = merge(merge(defaultOptions, chartOptions), chart.options.library || {});
 
